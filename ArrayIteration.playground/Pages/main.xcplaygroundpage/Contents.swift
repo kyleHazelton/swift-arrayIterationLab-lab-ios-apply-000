@@ -15,9 +15,7 @@
  */
 // write your code here
 
-
-
-
+var cartContent: [String] = ["Chips","Salsa","Guacamole","Red wine"]
 
 
 /*: question2
@@ -25,10 +23,7 @@
  */
 // write your code here
 
-
-
-
-
+var numberList: [Int] = [1,2,3,4,5,6,7,8,9,10]
 
 
 /*: question3
@@ -36,10 +31,9 @@
  */
 // write your code here
 
-
-
-
-
+for number in numberList {
+    print(String(number))
+}
 
 
 /*: question4
@@ -47,7 +41,9 @@
  */
 // write your code here
 
-
+for item in cartContent {
+    print("You've purchased some \(item).")
+}
 
 
 
@@ -58,10 +54,13 @@
  */
 // write your code here
 
+func printItems (list:Array<String>) {
+    for item in list {
+        print(item)
+    }
+}
 
-
-
-
+printItems(cartContent)
 
 
 /*: question6
@@ -69,9 +68,11 @@
  */
 // write your code here
 
-
-
-
+func greetPpl (nameList:Array<String>) {
+    for name in nameList {
+        print("Yo wassup \(name)")
+    }
+}
 
 
 /*: question7
@@ -79,10 +80,18 @@
  */
 // write your code here
 
+var bunchaNums: [Int] = [40, 60, 50, 52, 59, 13, 90, 100, 5, 52, 51, 49]
 
+func under50 (numberList:Array<Int>) ->Array<Int> {
+    var under50Array: Array<Int> = []
+        for number in numberList {
+            if number < 50 {
+                under50Array.append(number)
+            }
+        }
+    print(under50Array)
+    return under50Array
+}
 
-
-
-
-
+under50(bunchaNums)
 
